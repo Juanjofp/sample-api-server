@@ -1,0 +1,27 @@
+version: '3'
+services:
+    api-server-mongodb:
+        image: mongo:3.6
+        container_name: 'api-server-mongodb'
+        environment:
+            - MONGO_DATA_DIR=/data/db
+        volumes:
+            - ./data:/data/db
+        ports:
+            - 27017:27017
+    api-server:
+        image: juanjofranco/api-server
+        container_name: 'api-server'
+        environment:
+            - NODE_ENV=production
+            - MONGODB_URL=mongodb://api-server-mongodb
+            - DATABASE_NAME=game_server
+        volumes:
+            - ./files:/var/files
+        ports:
+            - '8080:8080'
+        depends_on:
+            - api-server-mongodb
+volumes:
+    api-server-mongodb:
+    api-server:

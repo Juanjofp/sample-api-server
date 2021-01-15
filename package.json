@@ -1,0 +1,41 @@
+{
+    "name": "api-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "build/main.js",
+    "scripts": {
+        "test": "jest",
+        "devel": "cd src && nodemon main.js --exec babel-node",
+        "build": "babel src -d build",
+        "start": "cd src && babel-node main.js"
+    },
+    "author": "juanjofp",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-cli": "^6.18.0",
+        "babel-eslint": "^7.1.1",
+        "babel-jest": "^18.0.0",
+        "babel-preset-es2015": "^6.18.0",
+        "babel-preset-stage-2": "^6.18.0",
+        "eslint": "^3.13.1",
+        "jest": "^18.1.0",
+        "nodemon": "^1.18.10"
+    },
+    "dependencies": {
+        "babel-polyfill": "^6.26.0",
+        "bcrypt": "^4.0.1",
+        "body-parser": "^1.16.1",
+        "express": "^4.14.1",
+        "express-jwt": "^5.3.1",
+        "jsonwebtoken": "^7.3.0",
+        "mongodb": "^2.2.24",
+        "multer": "^1.3.0",
+        "node-fetch": "^1.6.3",
+        "oauth": "^0.9.15",
+        "querystring": "^0.2.0",
+        "request": "^2.88.0",
+        "request-promise": "^4.2.4",
+        "twit": "^2.2.5",
+        "uuidv4": "^6.2.6"
+    }
+}

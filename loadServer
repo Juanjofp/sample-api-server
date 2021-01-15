@@ -1,0 +1,4 @@
+rm -rf build
+npm install
+npm run build
+docker-compose up -d
