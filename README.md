@@ -4,7 +4,9 @@
 
 curl https://raw.githubusercontent.com/Juanjofp/sample-api-server/main/docker-compose.yml --output docker-compose.yml
 
-docker-compose up -d
+start: docker-compose up -d
+
+stop: docker-compose down
 
 ## How to use
 
