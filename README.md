@@ -2,7 +2,7 @@
 
 ## How to install
 
-curl https://raw.githubusercontent.com/Juanjofp/sample-api-server/main/docker-compose.yml
+curl https://raw.githubusercontent.com/Juanjofp/sample-api-server/main/docker-compose.yml --output docker-compose.yml
 
 docker-compose up -d
 
